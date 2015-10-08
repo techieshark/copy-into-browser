@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JS libs for browser console</title>
+        <meta name="description" content="Useful javascript libraries for quick tests in browser console">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+        <style>
+            body {
+                text-align: center;
+                font-style: italic;
+                font-family: serif;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin: 4em auto;
+                color: #474747;
+            }
+
+            a.load {
+                text-decoration: none;
+                background-color: rgb(74, 137, 219);
+                padding: 1em;
+                border-radius: 5px;
+                color: white;
+                margin-left: 1em;
+                font-style: normal;
+                font-family: sans-serif;
+            }
+
+            footer {
+                margin: 12em 0 4em 0;
+            }
+            footer a {
+                text-decoration: none;
+                font-size: 18px;
+                /*border-bottom: 1px solid gray;*/
+                font-family: sans-serif;
+                font-style: normal;
+                color: black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h1>Load jQuery ($) and lodash (_) in your browser console.</h1>
+
+        <p>Click this, or drag to bookmarks bar: <a class="load" href="javascript:(function() { var jq = document.createElement('script'); jq.src = 'https://code.jquery.com/jquery-2.1.4.js'; jq.async = false; document.getElementsByTagName('head')[0].appendChild(jq); var ld = document.createElement('script'); ld.src = 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'; document.getElementsByTagName('head')[0].appendChild(ld); var defer = function () { if (window.jQuery) { jQuery.noConflict(); $ = jQuery; } else { setTimeout(function() { defer() }, 50); } }; defer(); alert('jQuery ($) and lodash (_) are now available in your browser console'); console.log('jQuery ($) and lodash (_) should now be available.'); console.log('If not, there may be a Content Security Policy error.'); console.log('See: https://jquery.com https://lodash.com for library documentation.')})();">Load $ _</a></p>
+
+        <footer><a title="View source code on GitHub" href="https://github.com/techieshark/copy-into-browser"><i class="fa fa-github"></i></a></footer>
+    </body>
+</html>
